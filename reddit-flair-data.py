@@ -11,7 +11,7 @@ post = 0
 for submission in subreddit.submissions(1483228800, 1514678400):
     count = myData.get(submission.link_flair_text, 0)
     myData[submission.link_flair_text] = count + 1
-    post = post + 1
+    post += 1
     print("(#" + str(post) + ") " + submission.title)
 
 # Write data to a CSV file.
